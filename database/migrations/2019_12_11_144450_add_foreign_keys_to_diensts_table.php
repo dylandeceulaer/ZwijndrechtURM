@@ -14,7 +14,7 @@ class AddForeignKeysToDienstsTable extends Migration {
 	{
 		Schema::table('diensts', function(Blueprint $table)
 		{
-			$table->foreign('diensthoofd_id', 'diensts_ibfk_1')->references('id')->on('gebruikers')->onUpdate('RESTRICT')->onDelete('RESTRICT');
+			$table->foreign('diensthoofd', 'diensts_ibfk_1')->references('id')->on('gebruikers')->onUpdate('RESTRICT')->onDelete('RESTRICT');
 		});
 	}
 

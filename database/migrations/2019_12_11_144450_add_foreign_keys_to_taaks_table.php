@@ -14,7 +14,7 @@ class AddForeignKeysToTaaksTable extends Migration {
 	{
 		Schema::table('taaks', function(Blueprint $table)
 		{
-			$table->foreign('taakSoort_id', 'taaks_ibfk_1')->references('id')->on('taakSoorts')->onUpdate('RESTRICT')->onDelete('RESTRICT');
+			$table->foreign('taaksoort_id', 'taaks_ibfk_1')->references('id')->on('taaksoorts')->onUpdate('RESTRICT')->onDelete('RESTRICT');
 			$table->foreign('verantwoordelijke', 'taaks_ibfk_2')->references('id')->on('gebruikers')->onUpdate('RESTRICT')->onDelete('RESTRICT');
 			$table->foreign('gebruiker_id', 'taaks_ibfk_3')->references('id')->on('gebruikers')->onUpdate('RESTRICT')->onDelete('RESTRICT');
 		});

@@ -12,11 +12,19 @@ class GebruikerController extends Controller
         $this->middleware('auth');
     }
     public function index(){
-        
-        return view('gebruiker');
+        $gebruikers = Gebruiker::all();
+        return view('gebruiker',[
+            'gebruikers' => $gebruikers,
+        ]);
     }
     public function show($user){
         $gebruiker = Gebruiker::find($user);
+        return view('gebruiker',[
+            'gebruiker' => $gebruiker,
+        ]);
+    }
+    public function showByName($userName){
+        $gebruiker = Gebruiker::where("naam",$userName)->first();
         return view('gebruiker',[
             'gebruiker' => $gebruiker,
         ]);

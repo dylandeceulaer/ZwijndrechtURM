@@ -14,7 +14,7 @@ class AddForeignKeysToGebruikersprofielsTable extends Migration {
 	{
 		Schema::table('gebruikersprofiels', function(Blueprint $table)
 		{
-			$table->foreign('dienst_id', 'gebruikersprofiels_ibfk_1')->references('id')->on('diensts')->onUpdate('RESTRICT')->onDelete('RESTRICT');
+			$table->foreign('team_id', 'gebruikersprofiels_ibfk_1')->references('id')->on('teams')->onUpdate('RESTRICT')->onDelete('RESTRICT');
 		});
 	}
 

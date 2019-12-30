@@ -3,7 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
-class CreateTaakSoortsTable extends Migration {
+class CreateTaaksoortsTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,10 +12,11 @@ class CreateTaakSoortsTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('taakSoorts', function(Blueprint $table)
+		Schema::create('taaksoorts', function(Blueprint $table)
 		{
-			$table->integer('id', true);
+			$table->integer('id', true)->unsigned();
 			$table->string('naam')->nullable();
+			$table->softDeletes();
 			$table->timestamps();
 		});
 	}

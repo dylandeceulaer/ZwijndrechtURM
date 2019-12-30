@@ -12,10 +12,11 @@ class CreateToepassingSoortsTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('toepassingSoorts', function(Blueprint $table)
+		Schema::create('toepassingsoorts', function(Blueprint $table)
 		{
-			$table->integer('id', true);
+			$table->integer('id', true)->unsigned();;
 			$table->string('naam')->nullable();
+			$table->softDeletes();
 			$table->timestamps();
 		});
 	}

@@ -14,11 +14,12 @@ class CreateTaaksTable extends Migration {
 	{
 		Schema::create('taaks', function(Blueprint $table)
 		{
-			$table->integer('id', true);
-			$table->integer('taakSoort_id')->nullable()->index('taakSoortID');
-			$table->integer('verantwoordelijke')->nullable()->index('Verantwoordelijke');
-			$table->integer('gebruiker_id')->nullable()->index('gebruikerID');
+			$table->integer('id', true)->unsigned();
+			$table->integer('taaksoort_id')->nullable()->index()->unsigned();
+			$table->integer('verantwoordelijke')->nullable()->index()->unsigned();
+			$table->integer('gebruiker_id')->nullable()->index()->unsigned();
 			$table->boolean('isCompleet')->nullable();
+			$table->softDeletes();
 			$table->timestamps();
 		});
 	}

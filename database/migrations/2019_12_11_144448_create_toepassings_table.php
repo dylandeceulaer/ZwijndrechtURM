@@ -14,11 +14,12 @@ class CreateToepassingsTable extends Migration {
 	{
 		Schema::create('toepassings', function(Blueprint $table)
 		{
-			$table->integer('id', true);
+			$table->integer('id', true)->unsigned();
 			$table->string('naam');
-			$table->integer('toepassingsverantwoordelijke')->nullable()->index('toepassingsverantwoordelijke');
+			$table->integer('toepassingsverantwoordelijke')->nullable()->index()->unsigned();
 			$table->string('beschrijving')->nullable();
-			$table->integer('toepassingSoort_id')->nullable()->index('toepassingSoortID');
+			$table->integer('toepassingsoort_id')->nullable()->index()->unsigned();
+			$table->softDeletes();
 			$table->timestamps();
 		});
 	}

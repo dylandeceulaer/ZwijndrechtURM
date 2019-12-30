@@ -30,12 +30,12 @@ return [
     |
     */
 
-    'logo' => '<b>Admin</b>LTE',
+    'logo' => 'haha',
     'logo_img' => 'img/logo.png',
-    'logo_img_class' => 'brand-image-xl',
-    'logo_img_xl' => null,
-    'logo_img_xl_class' => 'brand-image-xs',
-    'logo_img_alt' => 'AdminLTE',
+    'logo_img_class' => 'logoZwijn',
+    'logo_img_xl' => 'img/logoxl.png',
+    'logo_img_xl_class' => 'logoZwijn',
+    'logo_img_alt' => 'Zwijndrecht URM',
 
     /*
     |--------------------------------------------------------------------------
@@ -189,6 +189,22 @@ return [
             'icon'        => 'far fa-fw fa-file',
             'label'       => 4,
             'label_color' => 'success',
+        ],
+        [
+            'text' => 'Mijn taken',
+            'url'  => 'taken',
+            'icon' => 'fas fa-tasks',
+        ],
+        ['header' => 'GEBRUIKERS'],
+        [
+            'text' => 'Nieuw in dienst',
+            'url'  => 'gebruikers/inDienst',
+            'icon' => 'fas fa-fw fa-user',
+        ],
+        [
+            'text' => 'Uit diesnt',
+            'url'  => 'gebruikers/uitDienst',
+            'icon' => 'fas fa-fw fa-user',
         ],
         ['header' => 'account_settings'],
         [

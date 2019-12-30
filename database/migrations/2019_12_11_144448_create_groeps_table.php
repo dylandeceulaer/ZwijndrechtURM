@@ -1,5 +1,4 @@
 <?php
-
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
@@ -14,10 +13,11 @@ class CreateGroepsTable extends Migration {
 	{
 		Schema::create('groeps', function(Blueprint $table)
 		{
-			$table->integer('id', true);
+			$table->integer('id', true)->unsigned();
 			$table->string('naam')->nullable();
-			$table->string('mail');
+			$table->string('email')->nullable();
 			$table->timestamps();
+			$table->softDeletes();
 		});
 	}
 

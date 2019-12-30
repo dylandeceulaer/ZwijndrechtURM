@@ -3,11 +3,23 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Toepassing extends Model
 {
+    protected $fillable = [
+        'naam','beschrijving'
+    ];
     public function toepassingsverantwoordelijke(){
-        //toepassingsverantwoordelijke is een gewone gebruiker, maar de foreignkey is anders om verwarring te voorkomen
-        return $this->belongsTo('App\Gebruiker','toepassingsverantwoordelijke');
+        return $this->belongsTo(Groep::class,'toepassingsverantwoordelijke');
     }
+    public function toepassingsoort(){
+        return $this->belongsTo(Toepassingsoort::class);
+    }
+    public function gebruikersprofielen(){
+        return $this->belongsToMany(Gebruikersprofiel::class)
+                    ->using(ToepassingGebruikersprofiel::class)
+                    ->withPivot(['meerInfo',]);
+    }
+    use SoftDeletes;
 }

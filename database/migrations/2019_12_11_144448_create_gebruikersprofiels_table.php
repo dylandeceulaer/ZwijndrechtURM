@@ -14,10 +14,12 @@ class CreateGebruikersprofielsTable extends Migration {
 	{
 		Schema::create('gebruikersprofiels', function(Blueprint $table)
 		{
-			$table->integer('id', true);
+			$table->integer('id', true)->unsigned();
 			$table->string('naam')->nullable();
-			$table->integer('dienst_id')->nullable()->index('dienstID');
+			$table->string('organogram_naam')->nullable();
+			$table->integer('team_id')->nullable()->index()->unsigned();
 			$table->timestamps();
+			$table->softDeletes();
 		});
 	}
 

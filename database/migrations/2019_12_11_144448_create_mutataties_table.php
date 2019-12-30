@@ -14,11 +14,12 @@ class CreateMutatatiesTable extends Migration {
 	{
 		Schema::create('mutataties', function(Blueprint $table)
 		{
-			$table->integer('gebruiker_id');
-			$table->integer('toepassing_id')->index('toepassingID');
+			$table->integer('gebruiker_id')->unsigned();
+			$table->integer('toepassing_id')->index()->unsigned();
 			$table->string('meerInfo')->nullable();
 			$table->boolean('isRecht')->nullable();
 			$table->timestamps();
+			$table->softDeletes();
 			$table->primary(['gebruiker_id','toepassing_id']);
 		});
 	}

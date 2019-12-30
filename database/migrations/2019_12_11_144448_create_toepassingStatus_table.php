@@ -14,10 +14,11 @@ class CreateToepassingStatusTable extends Migration {
 	{
 		Schema::create('toepassingStatus', function(Blueprint $table)
 		{
-			$table->integer('gebruiker_id');
-			$table->integer('toepassing_id')->index('toepassingID');
+			$table->integer('gebruiker_id')->unsigned();
+			$table->integer('toepassing_id')->unsigned();
 			$table->boolean('isActief')->default(0);
 			$table->timestamps();
+			$table->softDeletes();
 			$table->primary(['gebruiker_id','toepassing_id']);
 		});
 	}

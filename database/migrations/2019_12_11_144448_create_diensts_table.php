@@ -14,10 +14,11 @@ class CreateDienstsTable extends Migration {
 	{
 		Schema::create('diensts', function(Blueprint $table)
 		{
-			$table->integer('id', true);
+			$table->integer('id', true)->unsigned();
 			$table->string('naam')->nullable();
-			$table->integer('diensthoofd_id')->nullable()->index('diensthoofd');
+			$table->integer('diensthoofd')->nullable()->index()->unsigned();
 			$table->timestamps();
+			$table->softDeletes();
 		});
 	}
 

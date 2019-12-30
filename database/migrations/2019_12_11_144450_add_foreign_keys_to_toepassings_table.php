@@ -15,7 +15,7 @@ class AddForeignKeysToToepassingsTable extends Migration {
 		Schema::table('toepassings', function(Blueprint $table)
 		{
 			$table->foreign('toepassingsverantwoordelijke', 'toepassings_ibfk_1')->references('id')->on('groeps')->onUpdate('RESTRICT')->onDelete('RESTRICT');
-			$table->foreign('toepassingSoort_id', 'toepassings_ibfk_2')->references('id')->on('toepassingSoorts')->onUpdate('RESTRICT')->onDelete('RESTRICT');
+			$table->foreign('toepassingsoort_id', 'toepassings_ibfk_2')->references('id')->on('toepassingsoorts')->onUpdate('RESTRICT')->onDelete('RESTRICT');
 		});
 	}
 
