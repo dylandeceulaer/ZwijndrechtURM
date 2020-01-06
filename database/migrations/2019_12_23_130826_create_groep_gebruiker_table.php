@@ -14,8 +14,8 @@ class CreateGroepGebruikerTable extends Migration
     public function up()
     {
         Schema::create('groep_gebruiker', function (Blueprint $table) {
-            $table->integer('groep_id')->unsigned();
-            $table->integer('gebruiker_id')->unsigned();
+            $table->integer('groep_id')->index()->unsigned();
+            $table->integer('gebruiker_id')->index()->unsigned();
             $table->primary(['groep_id','gebruiker_id']);
             $table->foreign('groep_id')->references('id')->on('groeps')->onDelete('cascade');
             $table->foreign('gebruiker_id')->references('id')->on('gebruikers')->onDelete('cascade');

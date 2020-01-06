@@ -13,13 +13,15 @@ class Gebruikersprofiel extends Model
     public function team(){
         return $this->belongsTo(Team::class);
     }
-    public function gebruikers(){
-        return $this->HasMany(Gebruiker::class);
-    }
-    public function Toepassingen(){
+    public function toepassingen(){
         return $this->belongsToMany(Toepassing::class)
                     ->using(ToepassingGebruikersprofiel::class)
                     ->withPivot(['meerInfo',]);
+    }
+    public function gebruikers(){
+        return $this->belongsToMany(Gebruiker::class)
+                    ->using(GebruikerGebruikersprofiel::class)
+                    ->withPivot(['isTweedeDienst',]);
     }
     use SoftDeletes;
 }

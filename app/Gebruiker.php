@@ -20,14 +20,23 @@ class Gebruiker extends Authenticatable
     protected $hidden = [
         'remember_token','password'
     ];
-    public function gebruikersprofiel(){
-        return $this->belongsTo(Gebruikersprofiel::class);
+    public function gebruikersprofielen(){
+        return $this->belongsToMany(Gebruikersprofiel::class)
+                    ->using(GebruikerGebruikersprofiel::class)
+                    ->withPivot(['isTweedeDienst',]);
     }
     public function dienst(){
         return $this->HasOne(Dienst::class,"diensthoofd");
     }
     public function roles(){
         return $this->belongsToMany(Role::class, 'role_gebruiker');
+    }
+    public function hasRole($role)
+    {
+        return $this->roles()->get()->contains('naam', $role);
+    }
+    public function verantwoordelijkeTaken(){
+        return $this->hasMany(Taak::class,"verantwoordelijke");
     }
     public function groepen(){
         return $this->belongsToMany(Groep::class, 'groep_gebruiker');

@@ -14,8 +14,8 @@ class CreateToepassingStatusTable extends Migration {
 	{
 		Schema::create('toepassingStatus', function(Blueprint $table)
 		{
-			$table->integer('gebruiker_id')->unsigned();
-			$table->integer('toepassing_id')->unsigned();
+			$table->integer('gebruiker_id')->unsigned()->index();
+			$table->integer('toepassing_id')->unsigned()->index();
 			$table->boolean('isActief')->default(0);
 			$table->timestamps();
 			$table->softDeletes();

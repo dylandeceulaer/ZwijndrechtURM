@@ -16,5 +16,6 @@ class Taak extends Model
     public function taaksoort(){
         return $this->belongsTo(Taaksoort::class);
     }
+    
     use SoftDeletes;
 }

@@ -17,3 +17,5 @@ Auth::routes();
 
 Route::get('/gebruiker', 'GebruikerController@index')->name('home');
 Route::get('/gebruiker/{user}', 'GebruikerController@show')->name('gebruiker.show');
+
+Route::resource('/administrator/gebruikersprofielen','GebruikersprofielController');

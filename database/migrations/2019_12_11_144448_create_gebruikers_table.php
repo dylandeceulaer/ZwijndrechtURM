@@ -23,7 +23,6 @@ class CreateGebruikersTable extends Migration {
 			$table->dateTime('inDienst')->nullable();
 			$table->dateTime('uitDienst')->nullable();
 			$table->integer('gebruikersprofiel_id')->nullable()->index()->unsigned();
-			$table->boolean('isTweedeDienst')->default(0);
 			$table->boolean('isDeleted')->default(0);
 			$table->string('remember_token', 100)->nullable();
 			$table->softDeletes();

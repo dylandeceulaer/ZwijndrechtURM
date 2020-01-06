@@ -38,7 +38,7 @@ class GebruikerTableSeeder extends Seeder
                 }
                 $gebruikersprofiel->team()->associate($gebruikersprofielTeam);
                 $gebruikersprofiel->save();
-                $gebruiker->gebruikersprofiel()->associate($gebruikersprofiel);
+                $gebruiker->gebruikersprofielen()->attach($gebruikersprofiel);
                 $gebruiker->save();
             }
         }
