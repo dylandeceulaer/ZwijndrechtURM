@@ -14,8 +14,8 @@
                         </div>
                     @endif
 
-                    <p>gebruiker: {{ $gebruiker->naam }}</p>
-                    <p>dienst: {{$gebruiker->gebruikersprofiel->dienst->naam}}</p>
+                    <p>gebruiker: {{ $gebruikers->naam }}</p>
+                    <p>dienst: {{$gebruikers->gebruikersprofiel->dienst->naam}}</p>
                         
                 </div>
             </div>

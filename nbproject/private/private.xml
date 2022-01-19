@@ -5,20 +5,20 @@
         <group>
             <file>file:/C:/Users/dde/Documents/GitHub/ZwijndrechtURM/resources/views/auth/login.blade.php</file>
             <file>file:/C:/Users/dde/Documents/GitHub/ZwijndrechtURM/app/Gebruiker.php</file>
-            <file>file:/C:/Users/dde/Documents/GitHub/ZwijndrechtURM/database/migrations/2019_12_11_144450_add_foreign_keys_to_gebruikersprofiels_table.php</file>
             <file>file:/C:/Users/dde/Documents/GitHub/ZwijndrechtURM/resources/views/welcome.blade.php</file>
             <file>file:/C:/Users/dde/Documents/GitHub/ZwijndrechtURM/database/migrations/2019_12_11_144448_create_groeps_table.php</file>
-            <file>file:/C:/Users/dde/Documents/GitHub/ZwijndrechtURM/database/migrations/2019_12_11_144448_create_gebruikersprofielToepassings_table.php</file>
             <file>file:/C:/Users/dde/Documents/GitHub/ZwijndrechtURM/database/migrations/2019_12_11_144448_create_gebruikersprofiels_table.php</file>
+            <file>file:/C:/Users/dde/Documents/GitHub/ZwijndrechtURM/config/database.php</file>
             <file>file:/C:/Users/dde/Documents/GitHub/ZwijndrechtURM/resources/views/gebruiker.blade.php</file>
             <file>file:/C:/Users/dde/Documents/GitHub/ZwijndrechtURM/database/migrations/2019_12_11_144448_create_toepassingStatus_table.php</file>
             <file>file:/C:/Users/dde/Documents/GitHub/ZwijndrechtURM/resources/views/layouts/app.blade.php</file>
             <file>file:/C:/Users/dde/Documents/GitHub/ZwijndrechtURM/resources/sass/_variables.scss</file>
             <file>file:/C:/Users/dde/Documents/GitHub/ZwijndrechtURM/resources/sass/app.scss</file>
+            <file>file:/C:/Users/dde/Documents/GitHub/ZwijndrechtURM/.env</file>
             <file>file:/C:/Users/dde/Documents/GitHub/ZwijndrechtURM/database/migrations/2019_12_11_144448_create_gebruikers_table.php</file>
+            <file>file:/C:/Users/dde/Documents/GitHub/ZwijndrechtURM/server.php</file>
             <file>file:/C:/Users/dde/Documents/GitHub/ZwijndrechtURM/database/migrations/2019_12_11_144448_create_diensts_table.php</file>
             <file>file:/C:/Users/dde/Documents/GitHub/ZwijndrechtURM/database/factories/UserFactory.php</file>
-            <file>file:/C:/Users/dde/Documents/GitHub/ZwijndrechtURM/config/adminlte.php</file>
         </group>
     </open-files>
 </project-private>

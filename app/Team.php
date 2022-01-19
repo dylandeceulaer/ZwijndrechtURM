@@ -13,5 +13,8 @@ class Team extends Model
     public function gebruikersprofiels(){
         return $this->HasMany(Gebruikersprofiel::class);
     }
+    public function dienst(){
+        return $this->belongsTo(Dienst::class);
+    }
     use SoftDeletes;
 }

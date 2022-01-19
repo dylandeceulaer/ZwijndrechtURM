@@ -1,0 +1,28 @@
+@extends('layouts.app')
+
+@section('scripts')
+<script src="/js/bootstrap-table-filter-control.min.js"></script>
+<script src="/js/json-flat.js"></script>
+<script src="/js/model-helpers.js"></script>
+@endsection
+@section('content')
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">Selecteer een gebruikersprofiel</div>
+			</div>
+
+        </div>
+        <div class="col-md-12">
+            <div class="card">
+				<div class="card-header">
+				hey
+				</div>
+				<div class="card-body">
+				</div>
+            </div>
+        </div>
+    </div>
+</div>
+@endsection
