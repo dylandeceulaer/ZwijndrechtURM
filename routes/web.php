@@ -23,4 +23,5 @@ Route::get('/administrator','AdministratorController@index');
 Route::get('/administrator/gebruikersprofielen/{id}/toepassingen','GebruikersprofielController@showToepassingen')->middleware('can:viewAny,App\Gebruikersprofiel');
 Route::get('/administrator/gebruikersprofielen/{id}/gebruikers','GebruikersprofielController@showgebruikers')->middleware('can:viewAny,App\Gebruikersprofiel');
 Route::resource('/administrator/toepassingen','ToepassingController')->middleware('can:viewAny,App\Gebruikersprofiel');
+Route::resource('/administrator/toepassingsoorten','ToepassingsoortController')->middleware('can:viewAny,App\Gebruikersprofiel');
 Route::resource('/administrator/gebruikersprofielen','GebruikersprofielController')->middleware('can:viewAny,App\Gebruikersprofiel');

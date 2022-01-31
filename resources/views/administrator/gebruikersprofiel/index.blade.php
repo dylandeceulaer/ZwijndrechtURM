@@ -1,6 +1,4 @@
 @extends('adminlte::page')
-
-
 @section('content')
 
 <meta name="csrf-token" content="{{ csrf_token() }}" />
@@ -99,6 +97,7 @@ window.addEventListener('load', function () {
 		//Toggle edit switch zonder event te triggeren
 		$('#check-edit, #check-nieuw').data('bs.toggle').off(true);
 		$('#check-edit').data('bs.toggle').off(true);
+		$("#check-nieuw").prop("disabled", false);
 		$('#form input, #form select').each(function(){
 				$(this).attr("disabled", "disabled");
 			})
@@ -111,6 +110,7 @@ window.addEventListener('load', function () {
 		$isWijziging = false;
 		SaveEdit();
 		$('#wijzigingenModal').modal('hide');
+		$("#check-nieuw").prop("disabled", false);
 		fillData($table.bootstrapTable("getSelections")[0]);
 		$('#form input, #form select').each(function(){
 				$(this).attr("disabled", "disabled");
@@ -139,6 +139,7 @@ window.addEventListener('load', function () {
                   		});
 					}else{
 						//andere error
+						console.log($msg)
 						notify("danger",$msg["responseJSON"]);
 					}
 				}); 

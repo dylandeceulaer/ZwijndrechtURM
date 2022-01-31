@@ -10,7 +10,7 @@ class Toepassing extends Model
     protected $fillable = [
         'naam','beschrijving'
     ];
-    public function toepassingsverantwoordelijke(){
+    public function toepassingsverantwoordelijken(){
         return $this->belongsTo(Groep::class,'toepassingsverantwoordelijke');
     }
     public function toepassingsoort(){
